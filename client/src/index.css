@@ -1,0 +1,56 @@
+:root {
+  --ink: #12141c;
+  --ink-raised: #1a1d29;
+  --ink-line: #2a2e3d;
+  --paper: #edeae0;
+  --paper-dim: #a8a79f;
+  --amber: #e8a33d;
+  --amber-dim: #6b5530;
+  --teal: #3d8b8b;
+  --teal-dim: #234a4a;
+  --red: #d1495b;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-dim);
+  color: var(--paper);
+}
+
+/* Visible keyboard focus, kept subtle but unmistakable */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
